@@ -1,0 +1,290 @@
+/* Reset Básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 0 10px;
+}
+
+/* --- Header e Título --- */
+.header {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.logo-img {
+    background-color: #ff6600;
+    color: white;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    box-shadow: 0 4px 6px rgba(255, 102, 0, 0.3);
+}
+
+.header h1 {
+    font-size: 1.8em;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.date-location {
+    font-size: 0.9em;
+    color: #666;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    align-items: center;
+}
+
+.date-location .material-symbols-outlined {
+    font-size: 1em;
+    vertical-align: middle;
+    color: #ff6600;
+}
+
+
+/* --- Abas de Navegação --- */
+.tabs {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0; 
+    gap: 10px; 
+}
+
+.tab-button {
+    flex-grow: 1;
+    padding: 12px 15px;
+    cursor: pointer;
+    background-color: #fff;
+    color: #ff6600;
+    font-weight: 600;
+    font-size: 0.95em;
+    border-radius: 8px;
+    border: 1px solid #ff6600;
+    border-bottom: 3px solid #ff6600;
+    transition: all 0.3s ease;
+    max-width: 50%; 
+}
+
+.tab-button:hover:not(.active) {
+    background-color: #fffaf7;
+}
+
+.tab-button.active {
+    background-color: #ff6600;
+    color: white;
+    border: 1px solid #ff6600; 
+    border-bottom: 3px solid #ff6600; 
+}
+
+/* --- Conteúdo das Abas e Cards --- */
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.card-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.card {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+}
+
+.info-card {
+    flex: 1;
+    text-align: center;
+}
+
+.card-inscricoes {
+    text-align: center;
+}
+
+.card h3 {
+    font-size: 1.1em;
+    color: #333;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    font-weight: 700;
+}
+
+.card-kit h3, .card-percurso h3 {
+    justify-content: flex-start;
+}
+
+
+.card p {
+    font-size: 1.1em;
+    font-weight: 600;
+    color: #000;
+}
+
+.full-width {
+    width: 100%;
+}
+
+/* Estilos Específicos para os Ícones dos Cards */
+.material-symbols-outlined {
+    vertical-align: middle;
+    font-size: 1.5em;
+    font-weight: 400;
+}
+
+.icon-run { color: #ff6600; }
+.icon-clock { color: #ff6600; }
+.icon-fire { color: #ff6600; }
+.icon-kit { color: #ff6600; }
+.icon-map { color: #ff6600; }
+.icon-alert { color: #ff6600; }
+.icon-rules { color: #ff6600; }
+
+/* Lista de Kits/Percurso (Estilo de lista modificado) */
+.card-kit ul, .card-percurso ul, .card-regulamento ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.card-kit li, .card-percurso li {
+    margin-bottom: 5px;
+    font-size: 0.95em;
+}
+
+.card-kit ul li strong, .card-percurso ul li strong {
+    font-weight: 600;
+}
+
+/* Alerta de Informações Importantes */
+.alert-box {
+    background-color: #fff4e5;
+    border-left: 5px solid #ff6600;
+    padding: 15px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+.alert-box h3 {
+    color: #ff6600;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.alert-box ul {
+    list-style: disc;
+    margin-left: 20px;
+    font-size: 0.9em;
+}
+
+.alert-box ul li {
+    margin-bottom: 5px;
+}
+
+.alert-box ul li strong {
+    font-weight: 700;
+}
+
+/* --- Regulamento (Aba 2) --- */
+.card-regulamento ol {
+    list-style: none;
+    counter-reset: item;
+    padding-left: 0;
+}
+
+.card-regulamento ol li {
+    counter-increment: item;
+    margin-bottom: 15px;
+}
+
+.card-regulamento ol li h4 {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 1em;
+    color: #ff6600;
+    font-weight: 700;
+}
+
+.card-regulamento ol li h4::before {
+    content: counter(item) ". ";
+    color: #ff6600;
+    font-weight: 700;
+    margin-right: 5px;
+}
+
+.card-regulamento ul {
+    list-style: disc;
+    margin-left: 20px;
+    font-size: 0.95em;
+}
+
+.card-regulamento ul li {
+    margin-bottom: 3px;
+}
+
+/* Footer Regulamento (Ação) */
+.footer-regulamento {
+    background-color: #ff6600;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 0.9em;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.footer-regulamento .material-symbols-outlined {
+    color: white;
+    font-size: 1em;
+}
+
+/* Mensagem de Rodapé */
+.footer-msg {
+    text-align: center;
+    padding: 15px 0 30px;
+    font-size: 0.9em;
+    color: #666;
+}
